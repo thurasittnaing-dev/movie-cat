@@ -91,7 +91,7 @@ const App = () => {
  
             <div className="wrapper">
                 <header>
-                    <img src="./public/logo.png" alt="Logo" />
+                    <img src="./logo.png" alt="Logo" className='mb-5 border-indigo-300 border-[5px]' />
                     <h1>Movie Cat <span className="text-gradient">Streamline</span> your movie journey 🚀</h1>
                     <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
                 </header>

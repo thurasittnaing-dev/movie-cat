@@ -44,7 +44,7 @@
     }
 
     header img {
-        @apply w-24 h-auto object-contain mx-auto drop-shadow-md rounded-2xl mb-5;
+        @apply w-24 h-auto object-contain mx-auto drop-shadow-md rounded-2xl;
     }
 }
 
