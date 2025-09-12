@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Search from "./components/Search.jsx";
 import Loading from "./components/Loading.jsx";
-import MoviceCard from "./components/MoviceCard.jsx";
+import MovieCard from "./components/MovieCard.jsx";
 import {useDebounce} from "react-use";
 import {getTrendingMovies, updateSearchCount} from "./lib/appwrite.js";
 
@@ -60,7 +60,7 @@ const App = () => {
             setMovieList([]);
             setIsLoading(false);
             console.log('Movie fetch error!', error);
-            setErrorMessage('Error fetching movies. Please try again later.');
+            setErrorMessage('Error fetching movies. Please check your network or try with VPN.');
         }finally {
             setIsLoading(false);
         }
@@ -99,7 +99,7 @@ const App = () => {
                 {
                     trendingMovies.length > 0 && (
                         <section className="trending">
-                            <h2>Tending Movies</h2>
+                            <h2>Top Search Movies</h2>
                             <ul>
                                 {
                                     trendingMovies.map((movie,index) =>(
@@ -124,7 +124,7 @@ const App = () => {
                         ) : (
                             <ul>
                                 {movieList.map((movie) => (
-                                   <MoviceCard key={movie.id} movie={movie} />
+                                   <MovieCard key={movie.id} movie={movie} />
                                 ))}
                             </ul>
                         )

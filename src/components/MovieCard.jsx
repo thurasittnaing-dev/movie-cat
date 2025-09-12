@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MoviceCard = (
+const MovieCard = (
     {
         movie : {
             title,vote_average,poster_path,release_date,original_language}
@@ -27,4 +27,4 @@ const MoviceCard = (
        </div>
     )
 }
-export default MoviceCard
+export default MovieCard
