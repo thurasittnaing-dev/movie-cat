@@ -18,7 +18,7 @@ export const updateSearchCount = async (searchTerm,movie) => {
             collectionId: 'metrics',
             documentId: '',
             queries: [
-                Query.equal('movie_id',movie_id),
+                Query.equal('movie_id',movie.id),
             ] 
         });
         
